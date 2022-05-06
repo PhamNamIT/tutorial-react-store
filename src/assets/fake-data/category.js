@@ -1,15 +1,23 @@
 const category = [
   {
-    display: "Balo Acer",
-    categorySlug: "balo-acer"
+    display: "Balo",
+    categorySlug: "balo"
   },
   {
-    display: "Balo Asus",
-    categorySlug: "balo-asus"
+    display: "Sạc dự phòng",
+    categorySlug: "sac-du-phong"
   },
   {
-    display: "Balo mikkor",
-    categorySlug: "balo-mikkor"
+    display: "Case PC",
+    categorySlug: "case"
+  },
+  {
+    display: "Camera",
+    categorySlug: "camera"
+  },
+  {
+    display: "Tai nghe",
+    categorySlug: "tai-nghe"
   }
 ]
 

@@ -1,20 +1,30 @@
+/* Sạc dự phòng */
 const product_01_image_01 = require('../images/product/Battery/1_BB001.png')
 const product_01_image_02 = require('../images/product/Battery/2_BB001.png')
 
+/* Camera */
 const product_02_image_01 = require('../images/product/Camera/1_CMR.png')
 const product_02_image_02 = require('../images/product/Camera/2_CMR.png')
 
+/* Case PC */
 const product_03_image_01 = require('../images/product/Case/1_CPC001.png')
 const product_03_image_02 = require('../images/product/Case/2_CPC001.png')
 
+/* Củ sạc */
 const product_04_image_01 = require('../images/product/Charger/1_CG-C001.png')
 const product_04_image_02 = require('../images/product/Charger/2_CG-C001.png')
 
+/* Tai nghe bluetooth */
 const product_05_image_01 = require('../images/product/EarPhone/AirPods/1_EP-B001.png')
 const product_05_image_02 = require('../images/product/EarPhone/AirPods/2_EP-B001.png')
 
+/* Tai nghe chụp tai */
 const product_06_image_01 = require('../images/product/EarPhone/HeadPhone/1_EP-H001.png')
 const product_06_image_02 = require('../images/product/EarPhone/HeadPhone/2_EP-H001.png')
+
+/* Balo */
+const product_07_image_01 = require('../images/product/HandBag/1_BL001.png')
+const product_07_image_02 = require('../images/product/HandBag/2_BL001.png')
 
 const products = [
   {
@@ -23,7 +33,7 @@ const products = [
     image01: product_01_image_01, 
     image02: product_01_image_02,
     categorySlug: "sac-du-phong",
-    colors: ["gris", "black"],
+    colors: ["white"],
     slug: "sac-du-phong-BB001",
     size: "10000mAh"
   },
@@ -42,7 +52,7 @@ const products = [
     price: 1750000,
     image01: product_03_image_01, 
     image02: product_03_image_02,
-    categorySlug: "case-pc",
+    categorySlug: "case",
     colors: "black",
     slug: "case-pc-cpc001",
     size: "470 x 230 x 500 mm"
@@ -62,22 +72,32 @@ const products = [
     price: 3450000,
     image01: product_05_image_01, 
     image02: product_05_image_02,
-    categorySlug: "airpod",
+    categorySlug: "tai-nghe",
     colors: "white",
     slug: "earphone/airpod",
     size: ""
   },
   {
-    title: "Tai nghe Bluetooth Headphone Harman Kardon Fly ",
+    title: "Tai nghe Bluetooth Headphone Harman Kardon Fly",
     price: 3990000,
     image01: product_06_image_01, 
     image02: product_06_image_02,
-    categorySlug: "headphone",
+    categorySlug: "tai-nghe",
     colors: "black",
     slug: "earphone/headphone",
     size: ""
+  },
+  {
+    title: "Balo Laptop Acer Predator Gaming Utility",
+    price: 1400000,
+    image01: product_07_image_01, 
+    image02: product_07_image_02,
+    categorySlug: "balo",
+    colors: "black",
+    slug: "balo/acer",
+    size: "355 x 203 x 520 mm"
   }
-  // 6 products
+  // 7 products
 ]
 
 const getAllProducts = () => products
