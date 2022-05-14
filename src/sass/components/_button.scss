@@ -35,6 +35,10 @@
     height: 100%;
     width: 100%;
     transform: translateX(-100%);
+
+    svg {
+      font-size: 1.5rem;
+    }
   }
 
   &-animate:hover &__txt{
