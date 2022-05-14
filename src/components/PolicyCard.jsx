@@ -1,17 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { FaShoppingBag } from 'react-icons/fa'
-import { FaCreditCard } from 'react-icons/fa'
-import { FaRegGem } from 'react-icons/fa'
-import { FaDonate } from 'react-icons/fa'
-
 const PolicyCard = props => {
 
   return (
     <div className="policy-card">
       <div className="policy-card__icon">
-        
+        {props.icon}
       </div>
       <div className="policy-card__info">
         <div className="policy-card__info__name">
@@ -28,7 +23,7 @@ const PolicyCard = props => {
 PolicyCard.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired
+  icon: PropTypes.object.isRequired
 }
 
 export default PolicyCard

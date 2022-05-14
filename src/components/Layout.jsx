@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 
-import Router from '../routers/Router'
+import RoutesApp from '../routers/RoutesApp'
 
 
 const Layout = () => {
@@ -15,7 +15,7 @@ const Layout = () => {
         <div className="container">
           <Header />
           <div className="main">
-            <Router />
+            <RoutesApp />
           </div>
           <Footer />
         </div>

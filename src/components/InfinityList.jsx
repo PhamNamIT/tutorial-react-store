@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import Grid from './Grid'
 import ProductCard from './ProductCard'
-import { paste } from '@testing-library/user-event/dist/paste'
 
 const InfinityList = props => {
 
@@ -24,9 +23,10 @@ const InfinityList = props => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY + window.innerHeight >= listRef.current.clientHeight + listRef.current.offsetTop + 200) {
-        console.log("bottom")
-        setLoad(true)
+      if (listRef && listRef.current) {
+        if (window.scrollY + window.innerHeight >= listRef.current.clientHeight + listRef.current.offsetTop + 200) {
+          setLoad(true)
+        }
       }
     })
   }, [listRef])

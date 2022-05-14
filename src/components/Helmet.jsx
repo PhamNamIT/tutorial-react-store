@@ -5,6 +5,10 @@ const Helmet = props => {
 
   document.title = "Store - " + props.title
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div>
       {props.children}

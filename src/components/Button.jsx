@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { FaShoppingBag } from 'react-icons/fa'
+
 const Button = props => {
 
   const bg = props.backgroundColor ? 'bg-' + props.backgroundColor : 'bg-main'
@@ -8,8 +10,6 @@ const Button = props => {
   const size = props.size ? 'btn-' + props.size : ''
 
   const animate = props.animate ? 'btn-animate' : ''
-
-  
 
   return (
     <button 
@@ -20,7 +20,7 @@ const Button = props => {
       {
         props.icon ? (
           <span className="btn__icon">
-            <i className={`${props.icon} bx-tada`}></i>
+            <FaShoppingBag />
           </span>
         ) : null
       }

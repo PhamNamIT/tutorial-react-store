@@ -14,7 +14,7 @@ const ProductCard = props => {
           <img src={props.img01} alt="" />
           <img src={props.img02} alt="" />
         </div>
-        <h3 className="product-card__name">{props.title}</h3>
+        <h3 className="product-card__name">{props.name}</h3>
         <div className="product-card__price">
           {numberWithCommas(props.price)}
           <span className="product-card__price__old">
