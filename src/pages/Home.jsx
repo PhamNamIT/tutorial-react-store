@@ -67,7 +67,7 @@ const Home = () => {
                   key={index}
                   img01={item.image01}
                   img02={item.image02}
-                  title={item.title}
+                  name={item.title}
                   price={item.price}
                   slug={item.slug}
                 />
