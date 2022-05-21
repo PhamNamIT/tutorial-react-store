@@ -5,7 +5,9 @@ import { BrowserRouter } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 
-import RoutesApp from '../routers/RoutesApp'
+import ProductViewModal from './ProductViewModal';
+
+import Router from '../routers/Router'
 
 
 const Layout = () => {
@@ -15,9 +17,10 @@ const Layout = () => {
         <div className="container">
           <Header />
           <div className="main">
-            <RoutesApp />
+            <Router />
           </div>
           <Footer />
+          <ProductViewModal />
         </div>
       </div>
     </BrowserRouter>

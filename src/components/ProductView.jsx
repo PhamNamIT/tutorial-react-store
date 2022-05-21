@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { withRouter } from 'react-router'
+import { useNavigate } from 'react-router'
+
+import { useDispatch } from 'react-redux'
+
+import { remove } from '../redux/product-modal/productModalSlice'
+import { addItem } from '../redux/shopping-cart/cartItemsSlice'
 
 import { FaMinus, FaPlus } from 'react-icons/fa'
 
@@ -10,7 +15,18 @@ import numberWithCommas from '../utils/numberWithCommas'
 
 const ProductView = props => {
 
-  const product = props.product
+  let product = props.product
+
+  if (product === undefined) product = {
+    price: 0,
+    title: "",
+    size: [],
+    colors: []
+  }
+
+  const dispatch = useDispatch()
+
+  const history = useNavigate()
 
   const [previewImg, setPreviewImg] = useState(product.image01)
 
@@ -50,12 +66,29 @@ const ProductView = props => {
 
   const addToCart = () => {
     if (check()) {
-      console.log({color, quantity})
+      dispatch(addItem({
+        slug: product.slug,
+        color: color,
+        size: size,
+        quantity: quantity,
+        price: product.price
+      }))
+      alert('success')
     }
   }
 
   const gotoCart = () => {
-    if (check()) props.history.push('/cart')
+    if (check()) {
+      dispatch(addItem({
+        slug: product.slug,
+        color: color,
+        size: size,
+        quantity: quantity,
+        price: product.price
+      }))
+      dispatch(remove())
+      history('/cart')  
+    }
   }
 
   return (
@@ -72,7 +105,7 @@ const ProductView = props => {
         <div className="product__images__main">
           <img src={previewImg} alt="" />
         </div>
-        <div className={`product-description ${descriptionExpand ? 'expand' : ''}`}>
+        <div className={`product-description mobile ${descriptionExpand ? 'expand' : ''}`}>
           <div className="product-description__title">
             Chi tiết sản phẩm
           </div>
@@ -152,7 +185,7 @@ const ProductView = props => {
         </div>
         <div className="product__info__item">
           <Button onClick={() => addToCart()}>Thêm vào giỏ</Button>
-          <Button onclick={() => gotoCart()}>Mua ngay</Button>
+          <Button onClick={() => gotoCart()}>Mua ngay</Button>
         </div>
       </div>
     </div>
@@ -160,7 +193,7 @@ const ProductView = props => {
 }
 
 ProductView.propTypes = {
-  product: PropTypes.object.isRequired
+  product: PropTypes.object
 }
 
-export default withRouter(ProductView)
+export default ProductView

@@ -52,8 +52,8 @@ const InfinityList = props => {
     <div ref={listRef}>
       <Grid
         col={4}
-        mdCol={2}
-        smCol={1}
+        mdCol={4}
+        smCol={2}
         gap={20}
       >
         {

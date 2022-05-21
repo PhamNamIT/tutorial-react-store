@@ -95,13 +95,13 @@ const Catalog = () => {
 
   const filterRef = useRef(null)
 
-  const showHidenFilter = () => filterRef.current.classList.toggle('active')
+  const showHiddenFilter = () => filterRef.current.classList.toggle('active')
 
   return (
     <Helmet title="Sản phẩm">
       <div className="catalog">
         <div className="catalog__filter" ref={filterRef}>
-          <div className="catalog__filter__close" onClick={() => showHidenFilter()}>
+          <div className="catalog__filter__close" onClick={() => showHiddenFilter()}>
             <FaWindowClose />
           </div>
           <div className="catalog__filter__widget">
@@ -165,7 +165,7 @@ const Catalog = () => {
           </div>
         </div>
         <div className="catalog__filter__toggle">
-          <Button size="sm" onClick={() => showHidenFilter()}>Bộ Lọc</Button>
+          <Button size="sm" onClick={() => showHiddenFilter()}>Bộ Lọc</Button>
         </div>
         <div className="catalog__content">
           <InfinityList 
